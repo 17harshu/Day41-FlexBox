@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+    <title>Flex demo</title>
+    <style>
+        body {
+            padding: 2em;
+        }
+
+        .headerContainer {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: aqua;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .footerContainer {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: blueviolet;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .mainContainer {
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+        .mainContentItem{
+            text-align: left;
+            background: chocolate;
+        }
+        article{
+            padding: 10px;
+            margin: 10px;
+            background: darkgrey;
+        }
+        .sideBarLeftItem{
+            background: fuchsia;
+        }
+        .sideBarRightItem{
+            background:goldenrod;
+        }
+        .sideBarItem{
+            flex: 1 0 0 ;
+            border: 0px solid hotpink;
+        }
+        .mainContentItem{
+            flex: 3 10px;
+        }
+        .sideBarLeftItem{order: 1;}
+        .mainContentItem{order: 2;}
+        .sideBarRightItem{order: 3;}
+    </style>
+</head>
+
+<body>
+    <header class="headerContainer">
+        <h1>HEADER</h1>
+    </header>
+    <div class="mainContainer">
+        <section class="mainContentItem">
+            <article>
+                <h2>First Article</h2>
+                <p>
+                    The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model.
+                </p>
+            </article>
+            <article>
+                <h2>Second Article</h2>
+                <p>
+                    When we describe flexbox as being one dimensional we are describing the fact that flexbox deals with layout in one dimension at a time — either as a row or as a column.        
+                </p>
+            </article>
+            <article>
+                <h2>Third Article</h2>
+                <p>
+                    When working with flexbox you need to think in terms of two axes — the main axis and the cross axis. The main axis is defined by the flex-direction property, and the cross axis runs perpendicular to it.                 
+                </p>
+            </article>
+        </section>
+        <sideBar class="sideBarItem sideBarLeftItem">
+            <div class="center">
+                <p>Left Side Bar</p>
+            </div>
+        </sideBar>
+        <sideBar class="sideBarItem sideBarRightItem">
+            <div class="center">
+                <p>Right Side Bar</p>
+            </div>
+        </sideBar>
+    </div>
+    <footer class="footerContainer">FOOTER</footer>
+</body>
+
+</html>
